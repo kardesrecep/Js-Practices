@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+<!--     /*JavaScript ile kullanıcıdan input içinde adını girmesini isteyerek,
+   Buttona basıldığında alert ekranında 
+   Merhaba [kullanici] yazdırılmasını
+    sağlayan örneği oluşturunuz.*/ -->
+
+    <input type="text" id="txtAd" placeholder="Adinizi Giriniz.">
+    <button id="btn">TIKLA</button>
+    
+    <script>
+        let btnYaz=document.getElementById("btn");
+       
+
+         btnYaz.addEventListener("click",()=>{
+          yaz();
+
+         })
+
+        const yaz = () => { 
+       let metin=document.getElementById("txtAd").value;
+          alert("Merhaba"+" "+ metin)
+          
+           
+        }
+     
+      
+        
+
+
+
+    </script>
+  </body>
+</html>

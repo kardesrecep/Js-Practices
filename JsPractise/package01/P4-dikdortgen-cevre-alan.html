@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <!--   JavaScript ile Kısa ve Uzun Kenarı girilen Dikdörtgenin Alanı ve Çevresini
+    Hesaplayan örneği oluşturunuz. -->
+
+    <input type="text" id="kisa-kenar" placeholder="kisa kenar">
+    <input type="text" id="uzun-kenar" placeholder="uzun kenar">
+    <button id="hesapla" onclick="hesapla()">Hesapla</button>
+    <h4 id="result"></h4>
+<script>
+
+  const buton=document.querySelector("#hesapla");
+
+
+    const hesapla = () => { 
+        let kisa=Number(document.querySelector("#kisa-kenar").value) ;
+        let uzun=Number(document.querySelector("#uzun-kenar").value) ;
+        const cevre=(kisa+uzun)*2;
+        const alan=kisa*uzun;
+        document.querySelector("#result").innerHTML=`Cevre:${cevre} alan:${alan}`
+        
+
+
+
+
+
+    }
+
+
+
+
+</script>
+
+  </body>
+</html>

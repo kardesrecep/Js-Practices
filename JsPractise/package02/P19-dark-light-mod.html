@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container{
+        padding: 1rem;
+      }
+
+ #icerik{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.renk1{
+    background-color:black ;
+    color: azure;
+
+}
+.renk2{
+    background-color: azure;
+    color:black;
+    margin-top: 10px;
+    border-radius: 1rem;
+
+   
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="icerik" class="renk1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At possimus
+        similique nobis voluptatum nulla nesciunt. Eos doloribus quaerat iure
+        cum, quidem, vitae laborum enim tenetur beatae nobis ut quod! Quam.
+      </div>
+
+      <button id="btn-degistir" class="renk2" onclick="change()">Mode</button>
+    </div>
+    <script>
+      let mode=true;
+      const change = () => {
+
+        let icerik=document.querySelector("#icerik").classList;
+
+        let buton=document.querySelector("#btn-degistir").classList;
+
+        if (mode) {
+
+          icerik.remove("renk1");
+
+          icerik.add("renk2")
+
+          buton.remove("renk2");
+          buton.add("renk1")
+
+          
+        }
+       else{
+        icerik.remove("renk2");
+        icerik.add("renk1");
+
+         buton.remove("renk1");
+         buton.add("renk2")
+       }
+
+       mode= !mode;
+     
+       
+          
+        }
+
+   
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

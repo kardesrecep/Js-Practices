@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Dairenin Alanini ve Cevresini Bulan Program</h1>
+
+    <label for="">Yaricapi giriniz</label>
+    <input type="number" id="daire" />
+    <button id="buton">Hesapla</button>
+    <div id="sonuc"></div>
+    <script>
+      let buton = document.getElementById("buton");
+
+      buton.addEventListener("click", () => {
+        hesapla();
+      });
+
+      const hesapla = () => {
+        let yariCap = Number(document.getElementById("daire").value);
+
+        let daireAlan,
+          pi = 3.14,
+          cevre;
+
+        daireAlan =  pi * yariCap * yariCap;
+        cevre = 2 * pi * yariCap;
+
+        document.getElementById("sonuc").innerHTML =
+          "Dairenin alani " + daireAlan + " , dairenin cevresi " + cevre;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Girilen Sayi Asal mi ?</h2>
+    <label for="">sayi giriniz</label>
+    <input type="number" id="sayi" />
+    <button id="kontrol">Kontrol Et</button>
+    <div id="sonuc"></div>
+    <script>
+      let buton = document.getElementById("kontrol");
+
+      buton.addEventListener("click", () => {
+        hesapla();
+      });
+
+      const hesapla = () => {
+        let sayi = Number(document.getElementById("sayi").value);
+        let control = 0;
+        for (let i = 2; i < sayi; i++) {
+          if (sayi % i == 0) {
+            control++;
+          }
+        }
+        if (control == 0) {
+          document.getElementById("sonuc").innerHTML = sayi + " sayisi asaldir";
+        } else {
+          document.getElementById("sonuc").innerHTML =
+            sayi + " sayisi asal degildir";
+        }
+      };
+
+      /*   if(kontrol != 0)
+                document.getElementById("sonuc").innerHTML = s + " sayısı asal değildir.";
+            else
+                document.getElementById("sonuc").innerHTML = s + " sayısı asaldır.";
+
+    
+            
+        
+ */
+    </script>
+  </body>
+</html>

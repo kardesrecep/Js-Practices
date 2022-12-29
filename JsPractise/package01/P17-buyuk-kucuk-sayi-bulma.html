@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Dizideki En Buyuk ve En Kucuk Elemani Bulan Program</h2>
+    <div id="sonuc"></div>
+    <script>
+      let array = [55, 35, 84, 25, 5, 8,-2,9];
+
+      let min = array[0];
+      let max = array[0];
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+          min = array[i];
+        }
+        if (array[i] > max) {
+          max = array[i];
+        }
+        document.getElementById("sonuc").innerHTML =
+          "Dizideki en kücük eleman " + min + ", en büyük elemenan " + max;
+      }
+    </script>
+  </body>
+</html>

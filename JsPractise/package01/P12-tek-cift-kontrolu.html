@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Girilen Sayinin Tek mi Cift mi Oldugunu Bulan Program</h2>
+    <input type="number" id="sayi" placeholder="sayi giriniz" />
+    <button id="goster">Goster</button>
+    <div id="sonuc"></div>
+    <script>
+      let buton = document.getElementById("goster");
+
+      buton.addEventListener("click", () => {
+        hesapla();
+      });
+
+      const hesapla = () => {
+        let numberEl = Number(document.getElementById("sayi").value);
+
+        if (numberEl % 2 == 0) {
+          document.getElementById("sonuc").innerHTML =
+            numberEl + " sayisi cifttir";
+        } else {
+            document.getElementById("sonuc").innerHTML =
+            numberEl + " sayisi tektir";
+      }
+    };
+    </script>
+  </body>
+</html>

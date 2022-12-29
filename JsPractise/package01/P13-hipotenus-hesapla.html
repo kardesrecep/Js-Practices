@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Hipotenüs Hesaplama</h2>
+    <label for="">Kisa kenari giriniz</label>
+    <input type="number" id="kisa" > 
+    
+    <label for="">Uzun kenari giriniz</label>
+    <input type="number" id="uzun" >
+
+    <button id="hesapla">Hesapla</button>
+    <div id="sonuc"></div>
+
+    <script>
+
+        let btn=document.querySelector("#hesapla");
+btn.addEventListener("click",()=>{
+    hesapla();
+})
+
+        const hesapla = () => { 
+
+            let kk= Number(document.getElementById("kisa").value);
+            let uk= Number(document.getElementById("uzun").value);
+
+            let hipotenus=Math.sqrt( (kk*kk)+(uk*uk));
+
+            document.getElementById("sonuc").innerHTML= "Hipotenus: "+ hipotenus
+
+
+         }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Girilen Sayiya Kadar Olan Sayilari Toplama</h1>
+    <input type="number" id="sayi" placeholder="Lutfen sayi giriniz" />
+    <button id="hesapla">Hesapla</button>
+    <div id="sonuc"></div>
+    <script>
+      let btn = document.getElementById("hesapla");
+
+      btn.addEventListener("click",()=>{
+        
+      hesapla()
+      })
+
+      const hesapla = () => {
+        let sayi = Number(document.getElementById("sayi").value);
+        let toplam = 0;
+        for (let i = 1; i <= sayi; i++) {
+          toplam += i;
+document.getElementById("sonuc").innerHTML="Sonuc: "+ toplam;
+        }
+      };
+
+    </script>
+  </body>
+</html>

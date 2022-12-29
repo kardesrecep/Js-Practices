@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+input{
+    margin-right: 5px;
+    width: 100px; 
+    height: 100px;
+    color: red;
+    font-size: 2rem;
+    border-radius: 100px;
+    background-color: rgb(0, 255, 128);
+}
+    </style>
+  </head>
+  <body>
+    <!-- 
+ Javascript kullanarak arttır ve azalt tuşları ile bir sayaç oluşturunuz. -->
+ <h1>Javascript Arttir ve Azalt Butonlari Ile Sayac Yapimi</h1>
+ <input type="button" onclick="arttir()" value="Arttir" >
+ <input type="button" onclick="azalt()"  value="Azalt" >
+ <input type="button" id="result" value="0">
+ <script>
+
+const arttir = () => {
+    let result=document.getElementById("result");
+    result.value=Number(result.value)+1;
+}
+const azalt = () => {
+    let result=document.getElementById("result");
+    result.value=Number(result.value)-1;
+}
+
+
+
+
+
+
+ </script>
+
+
+
+
+  </body>
+</html>

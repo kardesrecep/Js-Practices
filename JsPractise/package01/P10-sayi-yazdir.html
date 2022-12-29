@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Girilen İki Sayi Arasindaki Sayilari Ekrana Yazdiran Program</h2>
+    <label for="">Kucuk Sayi</label>
+    <input type="number" id="s1" />
+
+    <label for="">Buyuk Sayi</label>
+    <input type="number" id="s2" />
+
+    <button id="yazdir">Yazdir</button>
+
+    <div id="sonuc"></div>
+    <script>
+      let btn = document.getElementById("yazdir");
+
+      const yazdir = () => {
+
+        let numEl1=Number(document.getElementById("s1").value);
+        let numEl2=Number(document.getElementById("s2").value);
+
+        for (let i = numEl1; i <=numEl2 ; i++) {
+            document.getElementById("sonuc").innerHTML+="<p>"+i+"</p>";
+          
+            
+        }
+        
+
+       
+      };
+
+
+      btn.addEventListener("click",()=>{
+        yazdir();
+      })
+    </script>
+  </body>
+</html>

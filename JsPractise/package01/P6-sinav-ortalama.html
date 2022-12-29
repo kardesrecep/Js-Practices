@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+      input {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!--   Kullanıcıdan alınan 3 adet sınav notunun ortalamasını
+     bulan Javascript kodunu yazınız.  -->
+
+    <label>1. sinav : </label>
+    <input type="number" id="sinav1" /><br />
+
+    <label>2. sinav : </label>
+    <input type="number" id="sinav2" /><br />
+
+    <label>3. sinav : </label>
+    <input type="number" id="sinav3" /> <br />
+
+    <button id="hesapla" onclick="hesapla()">Hesapla</button>
+
+    <div id="sonuc"></div>
+    <script>
+      let buton = document.getElementById("hesapla");
+
+      const hesapla = () => {
+        let s1 = Number(document.getElementById("sinav1").value);
+        let s2 = Number(document.getElementById("sinav2").value);
+        let s3 = Number(document.getElementById("sinav3").value);
+        let ortalama = Math.floor((s1 + s2 + s3) /3 );
+    
+        if (Math.floor(ortalama) > 49) {
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " ile Gectin.";
+        } else
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " ile Kaldin";
+      };
+    </script>
+  </body>
+</html>

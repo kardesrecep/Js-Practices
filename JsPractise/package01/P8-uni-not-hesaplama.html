@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Vize Notu</label>
+    <input type="number" id="vize" />
+
+    <label for="">Final Notu</label>
+    <input type="number" id="final" />
+
+    <button id="hesapla" onclick="hesapla()">Hesapla</button>
+    <div id="sonuc" style="font-size: larger"></div>
+
+    <script>
+      const hesapla = () => {
+        let vize = Number(document.getElementById("vize").value);
+        let final = Number(document.getElementById("final").value);
+
+        const ortalama = vize * 0.4 + final * 0.6;
+        if (ortalama >= 84.5 && ortalama <= 100)
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " => AA";
+        else if (ortalama >= 69.5 && ortalama < 84.5)
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " => BB";
+        else if (ortalama >= 59.5 && ortalama < 69.5)
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " => CC";
+        else if (ortalama >= 49.5 && ortalama < 59.5)
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " => DD";
+        else
+          document.getElementById("sonuc").innerHTML =
+            "Ortalama : " + ortalama + " => FF";
+      };
+    </script>
+  </body>
+</html>

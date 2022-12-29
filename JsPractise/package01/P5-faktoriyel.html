@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Sayi giriniz</label>
+    <input type="Number" id="num" />
+    <button id="hesapla" onclick="hesapla()">Hesapla</button>
+
+    <h4 id="result">Sonuc</h4>
+
+    <script>
+      const hesapla = () => {
+        let factoriyel = 1;
+        let sayi = document.querySelector("#num").value;
+        sayi = Number(sayi);
+
+         if (sayi>=0) {
+              for (let i = 1; i <= sayi; i++) {
+          factoriyel *= i;
+            
+         }
+        }
+
+        document.querySelector("#result").innerHTML="sonuc: " + factoriyel;
+      };
+    </script>
+  </body>
+</html>

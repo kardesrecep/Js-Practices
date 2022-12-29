@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Iki Sayiyi Karsilastirma</h2>
+    <label for="">1.sayiyi giriniz</label>
+    <input type="number" id="s1" />
+
+    <label for="">2.sayiyi giriniz</label>
+    <input type="number" id="s2" />
+
+    <button id="karsilastir">Karsilastir</button>
+    <div id="sonuc"></div>
+
+    <script>
+      const buton = document.getElementById("karsilastir");
+
+      buton.addEventListener("click",()=>{
+        karsilastir();
+      })
+
+      const karsilastir = () => {
+        let num1 = Number(document.getElementById("s1").value);
+        let num2 = Number(document.getElementById("s2").value);
+
+        if (num1 > num2) {
+          document.getElementById("sonuc").innerHTML =
+            "Girilen birinci sayi olan " +
+           num1 +
+            " sayisi " +
+            num2 +
+            " sayisindan büyüktür.";
+        } else if (num2 > num1) {
+            document.getElementById("sonuc").innerHTML =
+            "Girilen ikinci sayi olan " +
+           num2 +
+            " sayisi " +
+            num1 +
+            " sayisindan büyüktür.";
+        }
+
+        else{
+            document.getElementById("sonuc").innerHTML = "İki sayi birbirine esittir.";
+        }
+      };
+    </script>
+  </body>
+</html>

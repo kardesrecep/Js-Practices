@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Indirim Hesaplama (if-else/ternary/Short Circuit)</h2>
+    <div class="icerik">
+      <input type="number" id="yas" placeholder="yasinizi giriniz" />
+      <input type="number" id="fiyat" placeholder="urunun fiyatini giriniz" />
+      <button id="btn" onclick="hesapla()">Indirim hesapla</button>
+      <div id="mesaj"></div>
+    </div>
+    <script>
+      let btn = document.querySelector("#btn");
+      function hesapla() {
+        let yas = Number(document.querySelector("#yas").value);
+        let fiyat = Number(document.querySelector("#fiyat").value);
+        let indirimliFiyat;
+        //ternary
+     //   let indirimliFiyat = yas >= 65 ? fiyat * 0.5 : fiyat * 0.9;
+
+   
+/* 
+
+  //if-else
+     if (yas>=65) {
+        indirimliFiyat=fiyat*0.5;
+        
+     }else{
+        indirimliFiyat=fiyat*0.9;
+     }
+ */
+
+ //short Circuit
+    yas>=65&&(indirimliFiyat=fiyat*0.5);
+    yas<65&&(indirimliFiyat=fiyat*0.9);
+
+
+
+        document.querySelector(
+          "#mesaj"
+        ).innerText = `urunun indirimli fiyati: ${indirimliFiyat} `;
+      }
+    </script>
+  </body>
+</html>

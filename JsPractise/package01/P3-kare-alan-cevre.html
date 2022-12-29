@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  JavaScript ile kenar uzunluğu girilen karenin alan ve çevresini hesaplayan
+    örneği oluşturunuz. -->
+
+    <input type="number" id="kenar" placeholder="Kenar uzunlugunu giriniz" />
+    <br />
+    <button id="alan">Karenin Alani</button>
+    <button id="cevre">Karenin Cevresi</button>
+    <h4 id="result"></h4>
+
+    <script>
+let alan=document.getElementById("alan");
+let cevre=document.getElementById("cevre");
+
+alan.addEventListener("click",()=>{
+    alanHesapla()
+})
+
+cevre.addEventListener("click",()=>{
+    cevreHesapla()
+})
+
+
+
+
+
+
+const alanHesapla = () => {
+    let kenar=document.getElementById("kenar").value;
+    let alanSonuc=kenar*kenar;
+
+    document.getElementById("result").innerHTML=alanSonuc;
+
+
+
+ }
+ const cevreHesapla = () => {
+    let cevre= Number(document.getElementById("kenar").value);
+    let cevreSonuc= (4*kenar)
+
+    document.getElementById("result").innerHTML=cevreSonuc;
+
+
+
+ }
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

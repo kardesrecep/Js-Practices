@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <!--   Kullanıcıdan alınan metni sayfadaki listeye ekleyen programı Javascript
+    dilinde yazınız. -->
+
+    <input type="text" id="text" placeholder="Metni giriniz" />
+    <button id="ekle">Metni Ekle</button>
+    <ul id="liste"></ul>
+    <script>
+
+      let butonEl=document.getElementById("ekle");
+      let listEl=document.getElementById("liste");
+
+      butonEl.addEventListener("click",()=>{
+        ekle()
+      })
+
+      const ekle = () => {
+       
+
+          let metinEl=document.getElementById("text").value;
+          listEl.innerHTML+="<li>"+metinEl+"</li>";
+
+          
+
+       }
+    </script>
+  </body>
+</html>
