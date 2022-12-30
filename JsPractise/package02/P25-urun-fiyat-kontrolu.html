@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="urun" name="urun" placeholder="urun bilgisini giriniz" />
+    <input type="number" id="fiyat" name="fiyat" placeholder="fiyat bilgisini giriniz" />
+    <button id="hesapla" onclick="hesapla()">Hesapla</button>
+    <div id="mesaj"></div>
+
+    <!-- 
+   ? Kullaniciya urun ve fiyat bilgisi girdirelim, 1500 TL ile bu urunden kac
+  ?  adet alabileceini ekrana yazdiralim -->
+
+    <script>
+      let button = document.querySelector("#hesapla");
+      const hesapla = () => {
+        let urun = document.querySelector("#urun").value;
+        let fiyat = Number(document.querySelector("#fiyat").value);
+        let mesaj=document.getElementById("mesaj")
+        let sayac = 1;
+        let toplam = 0;
+
+        do {
+          toplam = sayac * fiyat;
+        if (toplam>1500) {
+
+            toplam-=fiyat;
+            sayac--;
+            break;
+            
+        }
+        sayac++;
+
+
+
+
+        } while (toplam <= 1500);
+
+       mesaj.innerText = `${urun} adli ${toplam} TL odeyerek ${sayac} tane alabilirsiniz.`
+      };
+    </script>
+  </body>
+</html>

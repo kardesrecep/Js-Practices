@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ?Kullanicinin girdigi iki adet sayinin OKEK'ini bulup yazdirin -->
+
+    <h2>Ekok Bulma</h2>
+    <input type="number" name="sayi1" id="sayi1" />
+    <input type="number" name="sayi2" id="sayi2" />
+    <button id="btn" onclick="ekokBul()">Ekok Bul</button>
+    <dv id="sonuc"></dv>
+    <script>
+      const ekokBul = () => {
+        let sayi1 = Number(document.getElementById("sayi1").value);
+        let sayi2 = Number(document.getElementById("sayi2").value);
+        const buton = document.getElementById("btn");
+        let mesaj = document.getElementById("sonuc");
+
+        if (sayi1 > sayi2) {
+          let temp = sayi1;
+          sayi1 = sayi2;
+          sayi2 = temp;
+        }
+        for (let i = sayi2; i <= sayi1 * sayi2; i++) {
+          if (i % sayi1 == 0 && i % sayi2 == 0) {
+            mesaj.innerHTML = `<b>${sayi1} ve ${sayi2} sayilarinin EKOK'u=${i} `;
+            break;
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
