@@ -122,5 +122,38 @@ const ortUst=()=>{
 }
 
 console.log(average)
-console.log(ortUst())
+console.log(ortUst());
+
+//7- Dizideki notların ortalamasını bulun, ortalamadan yuksek olanların ortalamasını %20,
+// düşük olanların ortalamasını %10 artırarak yeni diziye atalım.
+const notlar = [
+  { ad: "Ali Can", not: 38 },
+  { ad: "Veli Kan", not: 62 },
+  { ad: "Oya Tan", not: 74 },
+  { ad: "Elif Han", not: 28 },
+  { ad: "Mine San", not: 86 },
+  { ad: "Mert Er", not: 67 },
+  { ad: "Bora Fer", not: 92 },
+  { ad: "Ayşe Yilmaz", not: 100 },
+  { ad: "İlke Cansiz", not: 56 },
+  { ad: "Sude Canli", not: 94 },
+  { ad: "Bade Sert", not: 72 },
+];
+
+let ort=notlar.reduce((toplam,y)=>toplam+y.not,0);
+ort=(ort/notlar.length).toFixed(2);
+ const yeniNotlar= notlar.map(item=>{
+
+  if (item.not>ort) {
+    item.not=(item.not*1.2).toFixed(2);
+    
+  }else{
+    item.not=(item.not*1.1).toFixed(2);
+  }
+  return item;
+
+ });
+ console.log(yeniNotlar)
+
+
 
